@@ -44,3 +44,28 @@ ss_residual=np.sum((Y-Y_pred)**2)
 r_squared=1-(ss_residual/ss_total)
 
 print(f"\nR-squared: {r_squared:.3f} (Model explains {r_squared*100:.1f}% of variance)")
+
+
+#create visualization
+plt.figure(figsize=(10,6))
+
+#Plot data points
+plt.scatter(X,Y,color='blue',alpha=0.6,s=50,label='Actual Data')
+
+#Plot regression line
+X_line=np.linspace(0,12,100)
+Y_line=m*X_line+c
+plt.plot(X_line,Y_line,'r-',linewidth=2,label=f'Y={m:.3f}X + {c:.3f}')
+
+#Add labels and formatting
+plt.xlabel('Experience (years)', fontsize=12)
+plt.ylabel('Salary (lakhs)', fontsize=12)
+plt.title('Linear Regression: Experience vs Salary', fontsize=14,fontweight='bold')
+plt.grid(True, alpha=0.3)
+plt.legend()
+
+#Add annotations for slope interpretation
+plt.text(8, 4, f'Slope = {m:.3f}\n(Salary increases by {m:.3f} lakhs\nper year of experience)', 
+         bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.5))
+plt.tight_layout()
+plt.show()
