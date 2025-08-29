@@ -6,6 +6,8 @@ __pycache__/
 *.pdb
 *.so
 *.dll
+*.png
+*.gif
 
 # Virtual environments
 venv/
