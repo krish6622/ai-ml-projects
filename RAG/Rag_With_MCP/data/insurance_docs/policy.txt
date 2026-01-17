@@ -1,0 +1,3 @@
+Insurance premiums depend on age, BMI, smoking habits, and region.
+Smokers usually pay higher premiums due to health risks.
+Southeast region has higher average insurance costs.
